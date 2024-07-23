@@ -6,3 +6,8 @@ export type PageType = {
   publish_date: Date;
   template_path: string;
 }
+
+export type ApplicationError = {
+  name: string;
+  message: string;
+};
