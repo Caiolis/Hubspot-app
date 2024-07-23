@@ -4,7 +4,13 @@ import "express-async-errors";
 import cors from 'cors';
 import { errorHandlingMiddleware } from "@/middlewares";
 
+// NOTE: THIS IS NOT TO BE USED IN PRODUCTION, IT'S JUST A WAY TO NOT USE DATABASE HERE
+export const tokens = {
+  accessToken: null,
+  refreshToken: null,
+};
 const app = express();
+
 app
   .use(json())
   .use(cors())

@@ -11,7 +11,7 @@ export function errorHandlingMiddleware(
   res: Response,
   next: NextFunction, // eslint-disable-line @typescript-eslint/no-unused-vars
 ) {
-  if (error.name === 'invalidTokenError') {
+  if (error.name === 'invalidTokenError' || error.name === 'invalidPageData') {
     return res.status(httpStatus.EXPECTATION_FAILED).send(error.message);
   }
   return res.sendStatus(httpStatus.INTERNAL_SERVER_ERROR);

@@ -5,6 +5,6 @@ import { createWelcomePage } from '@/controllers';
 
 const pageRouter = Router();
 
-pageRouter.post('/', schemaValidationMiddleware(PageSchema), createWelcomePage);
+pageRouter.post('/', createWelcomePage);
 
 export { pageRouter };
